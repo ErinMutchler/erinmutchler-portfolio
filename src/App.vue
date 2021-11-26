@@ -1,9 +1,12 @@
 <template>
   <NavBar />
+  <ViewTitle />
   <router-view />
+  <Footer />
 </template>
 
 <style>
+@import url("https://use.typekit.net/xjr6fat.css");
 
 :root {
   --link-text-color: black;
@@ -17,7 +20,9 @@ body {
 </style>
 <script>
 import NavBar from "@/components/NavBar";
+import ViewTitle from "@/components/ViewTitle";
+import Footer from "@/components/Footer";
 export default {
-  components: { NavBar }
+  components: { ViewTitle, NavBar, Footer, },
 }
 </script>
