@@ -2,7 +2,7 @@
   <nav class="nav-bar">
     <NavDropdownToggler @click="toggle" />
     <NavLinks>
-      <NavLink to="/">HOME</NavLink>
+      <NavLink to="/">PORTFOLIO</NavLink>
       <NavLink to="/about">ABOUT</NavLink>
       <NavLink to="/contact">CONTACT</NavLink>
     </NavLinks>

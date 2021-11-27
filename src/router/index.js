@@ -7,7 +7,7 @@ import TrumpetPerformance from "@/views/TrumpetPerformance";
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "Erin Mutchler",
     component: Home,
   },
   {
