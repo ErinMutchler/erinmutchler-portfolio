@@ -12,12 +12,12 @@
 }
 
 .collapsed {
-  min-height: 0;
+  max-height: 0;
   transform: scaleY(0);
 }
 
 .expanded {
-  min-height: 100%;
+  max-height: 100%;
   transform: scaleY(1);
 }
 
@@ -32,7 +32,7 @@
   }
 
   .collapsed {
-    min-height: 100%;
+    max-height: 100%;
     transform: scaleY(1);
   }
 }

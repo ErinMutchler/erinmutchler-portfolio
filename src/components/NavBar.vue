@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav-bar">
     <NavDropdownToggler @click="toggle" />
     <NavLinks>
       <NavLink to="/">HOME</NavLink>
@@ -8,6 +8,14 @@
     </NavLinks>
   </nav>
 </template>
+
+<style scoped>
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+</style>
 
 <script>
 import NavDropdownToggler from "@/components/NavDropdownToggler";
@@ -28,7 +36,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-
-</style>

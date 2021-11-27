@@ -6,6 +6,7 @@
 
 <style scoped>
 .view-title-container {
+  padding-left: 3rem;
   max-width: 960px;
   margin: auto;
 }

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import About from "@/views/About";
 import Contact from "@/views/Contact";
+import TrumpetPerformance from "@/views/TrumpetPerformance";
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     name: "Contact",
     component: Contact,
   },
+  {
+    path: "/trumpet-performance",
+    name: "Trumpet Performance",
+    component: TrumpetPerformance,
+  }
 ];
 
 const router = createRouter({
