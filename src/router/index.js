@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import About from "@/views/About";
 import Contact from "@/views/Contact";
 import TrumpetPerformance from "@/views/TrumpetPerformance";
+import SoftwareDesign from "@/views/SoftwareDesign";
 
 const routes = [
   {
@@ -24,7 +25,12 @@ const routes = [
     path: "/trumpet-performance",
     name: "Trumpet Performance",
     component: TrumpetPerformance,
-  }
+  },
+  {
+    path: "/software-design",
+    name: "Software Design",
+    component: SoftwareDesign,
+  },
 ];
 
 const router = createRouter({

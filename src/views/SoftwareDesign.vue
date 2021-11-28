@@ -1,23 +1,16 @@
 <template>
   <div v-for="(section, index) in sections" :key="section" v-show="!fetching">
-    <Section :title="section.title" :text="section.text" :reverse="index % 2 === 1">
-      <img class="about-image" :src="section.image_url" :alt="section.image_alt" />
+    <Section :title="section.title" :text="section.description" :reverse="index % 2 === 1">
+      <img class="software-design-image" :src="section.image_url" :alt="section.image_alt" />
     </Section>
   </div>
 </template>
 
-<style scoped>
-.about-image {
-  width: 80%;
-  margin: auto;
-}
-</style>
-
 <script>
 import Section from "@/components/Section";
-import {firestoreService, storageService} from "@/services/FirebaseConfig";
+import { firestoreService, storageService } from "@/services/FirebaseConfig";
 export default {
-  name: "About",
+  name: "SoftwareDesign",
   components: { Section },
   data() {
     return {
@@ -26,7 +19,7 @@ export default {
     };
   },
   created() {
-    firestoreService.getDocsInCollectionInOrder("about", "order").then((sections) => {
+    firestoreService.getDocsInCollectionInOrder("software_design", "order").then((sections) => {
       this.sections = sections;
       this.sections.forEach((section, index) => {
         storageService.getFileURL(section.image_path).then((url) => {
@@ -35,6 +28,13 @@ export default {
         });
       });
     });
-  },
+  }
 };
 </script>
+
+<style scoped>
+.software-design-image {
+  width: 30%;
+  margin: 1rem;
+}
+</style>
