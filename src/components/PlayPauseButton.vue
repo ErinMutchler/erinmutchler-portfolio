@@ -1,6 +1,6 @@
 <template>
   <div class="play-pause-button">
-    <svg viewBox="0 0 100 100" @click="playing = !playing">
+    <svg viewBox="0 0 100 100">
       <circle
         cx="50"
         cy="50"
@@ -10,11 +10,32 @@
         fill="transparent"
       />
 
-      <polygon points="40,35 40,65 64,50" stroke-width="2" stroke="white" fill="white" v-show="!playing" />
+      <polygon
+        points="40,35 40,65 64,50"
+        stroke-width="2"
+        stroke="white"
+        fill="white"
+        v-show="!playing"
+      />
 
-      <line x1="42" x2="42" y1="35" y2="65" stroke-width="4" stroke="white" v-show="playing" />
-      <line x1="58" x2="58" y1="35" y2="65" stroke-width="4" stroke="white" v-show="playing" />
-
+      <line
+        x1="42"
+        x2="42"
+        y1="35"
+        y2="65"
+        stroke-width="4"
+        stroke="white"
+        v-show="playing"
+      />
+      <line
+        x1="58"
+        x2="58"
+        y1="35"
+        y2="65"
+        stroke-width="4"
+        stroke="white"
+        v-show="playing"
+      />
     </svg>
   </div>
 </template>
@@ -22,10 +43,11 @@
 <script>
 export default {
   name: "PlayPauseButton",
-  data() {
-    return {
-      playing: false,
-    };
+  props: {
+    playing: {
+      type: Boolean,
+      required: true,
+    },
   },
 };
 </script>

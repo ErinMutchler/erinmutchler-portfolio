@@ -1,9 +1,9 @@
 <template>
   <SectionHeader :reverse="reverse">{{ title }}</SectionHeader>
   <section class="section">
-    <div class="section-content" :class="{reverse: reverse}">
+    <div class="section-content" :class="{ reverse: reverse }">
       <slot />
-      <p class="section-text">{{text}}</p>
+      <p class="section-text">{{ text }}</p>
     </div>
   </section>
 </template>
@@ -26,10 +26,11 @@
 .section-text {
   text-align: justify;
   padding: 1rem;
+  line-height: 1.4rem;
 }
 
 @media (min-width: 768px) {
-  .section{
+  .section {
     max-width: 720px;
   }
 
@@ -43,7 +44,7 @@
 }
 
 @media (min-width: 1220px) {
-  .section{
+  .section {
     max-width: 960px;
   }
 }

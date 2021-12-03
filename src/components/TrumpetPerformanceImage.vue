@@ -1,8 +1,8 @@
 <template>
   <div class="trumpet-performance-image">
-    <img :src="src" :alt="alt">
+    <img :src="src" :alt="alt" />
     <div class="filter" />
-    <PlayPauseButton />
+    <PlayPauseButton @click="toggleAudio" />
   </div>
 </template>
 
@@ -37,6 +37,7 @@
 
 <script>
 import PlayPauseButton from "@/components/PlayPauseButton";
+import { audioService } from "../services/AudioService";
 export default {
   name: "TrumpetPerformanceImage",
   components: { PlayPauseButton },
@@ -48,6 +49,17 @@ export default {
     alt: {
       type: String,
       required: true,
+    },
+    audio_url: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    toggleAudio() {
+      audioService.loadAudio(this.audio_url);
+      audioService.toggle();
+      console.log("Okay I am toggling audio in image");
     },
   },
 };

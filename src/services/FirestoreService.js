@@ -16,4 +16,12 @@ export default class FirestoreService {
     });
     return docs;
   }
+
+  async getTrumpetPerformanceSections() {
+    return this.getDocsInCollectionInOrder("trumpet_performance", "order");
+  }
+
+  async getAudioEngineeringSections() {
+    return this.getDocsInCollectionInOrder("audio_engineering", "order");
+  }
 }

@@ -1,5 +1,7 @@
 <template>
-<router-link class="nav-link" :to="to"><slot/></router-link>
+  <router-link class="nav-link" :to="to" @click="pauseAudio()"
+    ><slot
+  /></router-link>
 </template>
 
 <style scoped>
@@ -12,12 +14,19 @@
 </style>
 
 <script>
+import { audioService } from "../services/AudioService";
+
 export default {
   name: "NavLink",
   props: {
     to: {
       type: String,
       required: true,
+    },
+  },
+  methods: {
+    pauseAudio() {
+      audioService.pause();
     },
   },
 };

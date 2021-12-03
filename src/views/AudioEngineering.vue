@@ -5,7 +5,8 @@
       :text="section.description"
       :reverse="index % 2 === 1"
     >
-      <div class="trumpet-performance-image">
+      >
+      <div class="audio-engineering-image">
         <img :src="section.image_url" :alt="section.image_alt" />
         <div class="filter" />
         <PlayPauseButton
@@ -18,14 +19,14 @@
 </template>
 
 <style scoped>
-.trumpet-performance-image {
+.audio-engineering-image {
   width: 80%;
   margin: 1rem;
   position: relative;
   aspect-ratio: 1/1;
 }
 
-.trumpet-performance-image > img {
+.audio-engineering-image > img {
   width: 100%;
   position: absolute;
   z-index: 1;
@@ -40,7 +41,7 @@
 }
 
 @media (min-width: 768px) {
-  .trumpet-performance-image {
+  .audio-engineering-image {
     width: 250%;
   }
 }
@@ -52,7 +53,7 @@ import Section from "../components/Section";
 import PlayPauseButton from "../components/PlayPauseButton";
 import { audioService } from "../services/AudioService";
 export default {
-  name: "TrumpetPerformance",
+  name: "AudioEngineering",
   components: { Section, PlayPauseButton },
   data() {
     return {
@@ -79,7 +80,7 @@ export default {
     },
   },
   beforeCreate() {
-    firestoreService.getTrumpetPerformanceSections().then((sections) => {
+    firestoreService.getAudioEngineeringSections().then((sections) => {
       this.sections = sections;
 
       this.sections.forEach((section, index) => {
