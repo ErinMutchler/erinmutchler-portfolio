@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import About from "@/views/About";
 import Contact from "@/views/Contact";
 import TrumpetPerformance from "@/views/TrumpetPerformance";
+import AudioEngineering from "@/views/AudioEngineering";
 import SoftwareDesign from "@/views/SoftwareDesign";
 
 const routes = [
@@ -25,6 +26,11 @@ const routes = [
     path: "/trumpet-performance",
     name: "Trumpet Performance",
     component: TrumpetPerformance,
+  },
+  {
+    path: "/audio-engineering",
+    name: "Audio Engineering",
+    component: AudioEngineering,
   },
   {
     path: "/software-design",
